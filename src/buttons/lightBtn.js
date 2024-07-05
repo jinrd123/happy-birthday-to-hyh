@@ -30,8 +30,6 @@ lightBtn.addEventListener('click', () => {
     bulb_pink.classList.add('bulb-pink_animation');
     bulb_pink.classList.add('bulb-pink-animation-end');
 
-    lightBtn.style.transition = 'all 1.5s';
-    lightBtn.style.opacity = 0;
 })
 
 export default lightBtn;

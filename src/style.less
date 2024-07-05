@@ -47,11 +47,16 @@
         transform: translate(-50%, -60%);
         width: 100vw;
         z-index: 1;
+        &.banner-come_animation {
+            animation: bannar_come linear 6s;
+            transform: translate(-50%, calc(-60% + 500px));
+        }
     }
     .btn-position {
         position: absolute;
-        top: 60%;
+        top: 70%;
         margin-left: 10px;
+        z-index: 100;
     }
 
     .bulbs-container {
@@ -290,4 +295,19 @@
     100% {
         background-image: url('./picture/bulb.png');
     }
+}
+
+@keyframes bannar_come {
+	0%{
+        transform: translate(-50%, -60%);
+	}
+	33%{
+		transform: translate(-50%, calc(-60% + 500px)) rotate(10deg);
+	}
+	66% {
+		transform: translate(-50%, calc(-60% + 600px)) rotate(-10deg);
+	}
+	100% {
+		transform: translate(-50%, calc(-60% + 500px));
+	}
 }

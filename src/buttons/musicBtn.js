@@ -6,7 +6,7 @@ const bulb_orange = document.querySelector('.bulb_orange');
 const bulb_pink = document.querySelector('.bulb_pink');
 
 const musicBtn = document.createElement('button');
-musicBtn.textContent = 'PLAY MUSIC';
+musicBtn.textContent = 'Play Music';
 musicBtn.classList.add('style-button');
 musicBtn.classList.add('btn-position');
 musicBtn.classList.add('btn-appear_animation');
@@ -22,8 +22,6 @@ musicBtn.addEventListener('click', () => {
     const audio = document.querySelector('.song');
     audio.play();
 
-    musicBtn.style.transition = 'all 1.5s';
-    musicBtn.style.opacity = 0;
 }, 0)
 
 export default musicBtn;
