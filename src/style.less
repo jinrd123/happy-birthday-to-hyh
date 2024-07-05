@@ -131,6 +131,18 @@
             animation: bulb-glow-pink-after linear 1.5s infinite;
         }
     }
+
+    .balloon-border {
+        position: absolute;
+        width: 200vw;
+        transform: translateX(-50vw);
+        top: 100vh;
+        transition: all 8s;
+        z-index: 9999;
+        &.fly-end {
+            top: -5vh;
+        }
+    }
 }
 
 @keyframes bulb-glow-yellow {
