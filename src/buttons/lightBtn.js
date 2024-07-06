@@ -8,7 +8,6 @@ const bulb_green = document.querySelector('.bulb_green');
 const bulb_orange = document.querySelector('.bulb_orange');
 const bulb_pink = document.querySelector('.bulb_pink');
 lightBtn.addEventListener('click', () => {
-    container.style.transition = 'all 3s';
     container.style.backgroundColor = '#FFDAB9';
     bulbsContainer.style.opacity = 1;
 

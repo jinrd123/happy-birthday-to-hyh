@@ -1,3 +1,5 @@
+const container = document.querySelector('.container');
+
 const bulb_yellow = document.querySelector('.bulb_yellow');
 const bulb_red = document.querySelector('.bulb_red');
 const bulb_blue = document.querySelector('.bulb_blue');
@@ -18,6 +20,8 @@ musicBtn.addEventListener('click', () => {
     bulb_green.classList.add('bulb-green_animation-after');
     bulb_orange.classList.add('bulb-orange_animation-after');
     bulb_pink.classList.add('bulb-pink_animation-after');
+
+    container.classList.add('container-animation');
 
     const audio = document.querySelector('.song');
     audio.play();

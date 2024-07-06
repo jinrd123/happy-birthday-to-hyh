@@ -38,8 +38,32 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     background-color: #000000;
+    transition: all linear 5s;
+
+    &.container-animation {
+        animation: container-bg-animation linear 8s infinite;
+    }
+
+    @keyframes container-bg-animation {
+        0%{
+            background-color: #FFDAB9;
+        }
+        25%{
+            background-color: #FFE4B5;
+        }
+        50%{
+            background-color: #FFDAB9;
+        }
+        75%{
+            background-color: #FFEFD5;
+        }
+        100%{
+            background-color: #FFDAB9;
+        }
+    }
+
     .happy-birthday-banner {
         position: absolute;
         left: 50%;
