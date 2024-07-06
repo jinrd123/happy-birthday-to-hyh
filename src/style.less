@@ -167,6 +167,46 @@
             top: -5vh;
         }
     }
+
+    .balloon {
+        width: 25vw;
+        position: absolute;
+        left: -25vw;
+        bottom: -20vh;
+        transition: all linear 10s;
+        z-index: 99;
+        &.balloon-behavior-one {
+            animation: balloon_rotate_one linear 10s infinite;
+        }
+
+        @keyframes balloon_rotate_one {
+            0% {
+                transform: rotate(30deg);
+            }
+            50% {
+                transform: rotate(-30deg);
+            }
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        &.balloon-behavior-two {
+            animation: balloon_rotate_two linear 10s infinite;
+        }
+
+        @keyframes balloon_rotate_two {
+            0% {
+                transform: rotate(-20deg);
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+            100% {
+                transform: rotate(-20deg);
+            }
+        }
+    }
 }
 
 @keyframes bulb-glow-yellow {
