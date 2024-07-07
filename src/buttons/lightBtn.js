@@ -9,6 +9,7 @@ const bulb_orange = document.querySelector('.bulb_orange');
 const bulb_pink = document.querySelector('.bulb_pink');
 lightBtn.addEventListener('click', () => {
     container.style.backgroundColor = '#FFDAB9';
+    container.style.transition = 'all linear 5s';
     bulbsContainer.style.opacity = 1;
 
     bulb_yellow.classList.add('bulb-yellow_animation');

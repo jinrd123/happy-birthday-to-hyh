@@ -40,7 +40,6 @@
     position: relative;
     overflow: hidden;
     background-color: #000000;
-    transition: all linear 5s;
 
     &.container-animation {
         animation: container-bg-animation linear 8s infinite;
@@ -80,7 +79,7 @@
         position: absolute;
         top: 70%;
         margin-left: 10px;
-        z-index: 100;
+        z-index: 9999;
     }
 
     .bulbs-container {
@@ -162,7 +161,7 @@
         transform: translateX(-50vw);
         top: 100vh;
         transition: all 8s;
-        z-index: 9999;
+        z-index: 10000;
         &.fly-end {
             top: -5vh;
         }
@@ -170,11 +169,54 @@
 
     .balloon {
         width: 25vw;
+        height: 200px;
         position: absolute;
         left: -25vw;
         bottom: -20vh;
         transition: all linear 10s;
         z-index: 99;
+        background-repeat: no-repeat no-repeat;
+        background-size: contain;
+        opacity: 0;
+
+        h2 {
+            line-height: 130px;
+            display: none;
+        }
+
+        &#balloon1 {
+            background-image: url('./picture/b1.png');
+        }
+        
+        &#balloon2 {
+            background-image: url('./picture/b2.png');
+        }
+        
+        &#balloon3 {
+            background-image: url('./picture/b3.png');
+        }
+        
+        &#balloon4 {
+            background-image: url('./picture/b4.png');
+        }
+        
+        &#balloon5 {
+            background-image: url('./picture/b5.png');
+        }
+        
+        &#balloon6 {
+            background-image: url('./picture/b6.png');
+        }
+        
+        &#balloon7 {
+            background-image: url('./picture/b7.png');
+        }
+
+        &.balloon-show {
+            animation: balloon-show-animation linear 1s;
+            opacity: 1;
+        }
+
         &.balloon-behavior-one {
             animation: balloon_rotate_one linear 10s infinite;
         }
@@ -205,6 +247,60 @@
             100% {
                 transform: rotate(-20deg);
             }
+        }
+    }
+
+    .cake {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 30vh;
+        transform: translate(-50%, 5vh);
+        display: none;
+        &.show {
+            display: block;
+            animation: cake-animation linear 2.5s;
+        }
+
+        @keyframes cake-animation {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    .message {
+        position: absolute;
+        width: 80vw;
+        font-size: 30px;
+        color: #C4515C;
+        font-style: oblique;
+        left: 50%;
+        transform: translate(-50%, 15vh);
+        z-index: 10001;
+        display: none;
+        opacity: 0;
+        &.show {
+            display: block;
+            animation: message-show-animation linear 4.5s;
+            opacity: 1;
+        }
+    }
+    @keyframes message-show-animation {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
         }
     }
 }
@@ -386,4 +482,16 @@
 	100% {
 		transform: translate(-50%, calc(-60% + 500px));
 	}
+}
+
+@keyframes balloon-show-animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
